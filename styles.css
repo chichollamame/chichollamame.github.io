@@ -1,18 +1,49 @@
-/* Color de fondo de toda la página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: yellow;
-  font-family: Arial, sans-serif;
-  margin: 40px;
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  color: #333333;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
-/* El título principal */
 h1 {
-  color: black;
-  font-size: 60px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #111111;
+  margin-bottom: 10px;
 }
 
-/* El párrafo */
+h2 {
+  font-size: 22px;
+  color: #111111;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #111111;
+  padding-bottom: 5px;
+}
+
 p {
-  color: black;
-  font-size: 18px;
+  font-size: 17px;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #111111;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #111111;
+}
+
+a:hover {
+  color: #555555;
+  border-bottom-color: #555555;
 }
