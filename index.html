@@ -23,6 +23,8 @@
       <div class="hero">
         <h1>Chichollamame</h1>
         <p class="tagline">Artista multidisciplinar</p>
+        <div class="reloj" id="reloj"></div>
+        <div class="fecha" id="fecha"></div>
         <a href="#musica" class="boton">Descubre mi mundo</a>
       </div>
 
@@ -46,7 +48,7 @@
 
         <div class="pestanas">
           <button class="pestana activa" onclick="mostrar('eventos')">🎬 Eventos</button>
-          <button class="pestana" onclick="mostrar('videoclips')">📷 Fotografía</button>
+          <button class="pestana" onclick="mostrar('videoclips')">📷 Videoclips</button>
         </div>
 
         <div id="eventos" class="galeria">
@@ -104,6 +106,31 @@
         document.querySelectorAll('.pestana').forEach(p => p.classList.remove('activa'));
         event.target.classList.add('activa');
       }
+
+      function actualizarReloj() {
+        const ahora = new Date();
+
+        const hora = ahora.toLocaleTimeString('es-ES', {
+          timeZone: 'Europe/Madrid',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        });
+
+        const fecha = ahora.toLocaleDateString('es-ES', {
+          timeZone: 'Europe/Madrid',
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        document.getElementById('reloj').textContent = hora;
+        document.getElementById('fecha').textContent = fecha;
+      }
+
+      actualizarReloj();
+      setInterval(actualizarReloj, 1000);
     </script>
   </body>
 </html>

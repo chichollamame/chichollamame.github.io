@@ -85,13 +85,29 @@ h1 {
   color: #ffffff;
   letter-spacing: 8px;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .tagline {
   font-size: 18px;
   color: #cccccc;
   letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.reloj {
+  font-size: 48px;
+  font-weight: normal;
+  color: #ffffff;
+  letter-spacing: 6px;
+  margin-bottom: 8px;
+}
+
+.fecha {
+  font-size: 14px;
+  color: #aaaaaa;
+  letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
@@ -233,6 +249,10 @@ a:hover {
   h1 {
     font-size: 36px;
     letter-spacing: 4px;
+  }
+
+  .reloj {
+    font-size: 32px;
   }
 
   .galeria {
