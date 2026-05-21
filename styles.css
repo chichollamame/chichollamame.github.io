@@ -282,9 +282,11 @@ footer {
   text-transform: uppercase;
 }
 
-footer img {
-  display: block;
-  margin: 0 auto 15px auto;
+.visitas {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
 .formulario {
