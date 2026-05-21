@@ -11,6 +11,7 @@
         <span class="nav-nombre">Chichollamame</span>
         <ul>
           <li><a href="#musica">Música</a></li>
+          <li><a href="#fotografia">Fotografía</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#redes">Redes</a></li>
           <li><a href="#contacto">Contacto</a></li>
@@ -22,14 +23,48 @@
       <div class="hero">
         <h1>Chichollamame</h1>
         <p class="tagline">Artista multidisciplinar</p>
-        <a href="#musica" class="boton">Descubre mi música</a>
+        <a href="#musica" class="boton">Descubre mi mundo</a>
       </div>
 
       <div class="contenido">
 
         <h2 id="musica">Música</h2>
         <p>26 años creando desde el alma, en búsqueda de una expresión del destino.</p>
-        <a href="https://open.spotify.com/intl-es/track/7KWEFcRNmQTbRC4mItYO6x" target="_blank">🎵 Escucha en Spotify</a>
+        <iframe src="https://open.spotify.com/embed/track/7KWEFcRNmQTbRC4mItYO6x"
+          width="100%"
+          height="80"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+
+        <h2 id="fotografia">Fotografía</h2>
+        <p>Fotografía analógica. La luz que no se repite.</p>
+        <a href="https://www.instagram.com/grainight/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="icono-pequeno">
+          @grainight en Instagram
+        </a>
+
+        <div class="pestanas">
+          <button class="pestana activa" onclick="mostrar('eventos')">🎬 Eventos</button>
+          <button class="pestana" onclick="mostrar('videoclips')">📷 Fotografía</button>
+        </div>
+
+        <div id="eventos" class="galeria">
+          <img src="evento1.jpg" alt="Evento 1">
+          <img src="evento2.jpg" alt="Evento 2">
+          <img src="evento3.jpg" alt="Evento 3">
+          <img src="evento4.jpg" alt="Evento 4">
+          <img src="evento5.jpg" alt="Evento 5">
+          <img src="evento6.jpg" alt="Evento 6">
+        </div>
+
+        <div id="videoclips" class="galeria oculto">
+          <img src="videoclip1.jpg" alt="Videoclip 1">
+          <img src="videoclip2.jpg" alt="Videoclip 2">
+          <img src="videoclip3.jpg" alt="Videoclip 3">
+          <img src="videoclip4.jpg" alt="Videoclip 4">
+          <img src="videoclip5.jpg" alt="Videoclip 5">
+        </div>
 
         <h2 id="proyectos">Proyectos</h2>
         <p>El Último Piso — primer proyecto audiovisual.</p>
@@ -40,6 +75,10 @@
           <a href="https://www.instagram.com/chichollamame/" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
             @chichollamame
+          </a>
+          <a href="https://www.instagram.com/grainight/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            @grainight — Fotografía
           </a>
           <a href="https://www.youtube.com/channel/UCed2wMC0XeeDySeECxaBdDw" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
@@ -56,5 +95,15 @@
 
       </div>
     </div>
+
+    <script>
+      function mostrar(categoria) {
+        document.getElementById('eventos').classList.add('oculto');
+        document.getElementById('videoclips').classList.add('oculto');
+        document.getElementById(categoria).classList.remove('oculto');
+        document.querySelectorAll('.pestana').forEach(p => p.classList.remove('activa'));
+        event.target.classList.add('activa');
+      }
+    </script>
   </body>
 </html>

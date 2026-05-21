@@ -71,6 +71,12 @@ ul a:hover {
   align-items: center;
   text-align: center;
   padding: 20px;
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
@@ -99,6 +105,7 @@ h1 {
   letter-spacing: 3px;
   text-transform: uppercase;
   transition: all 0.3s;
+  border-bottom: 1px solid #ffffff;
 }
 
 .boton:hover {
@@ -140,6 +147,67 @@ a:hover {
   border-bottom-color: #ffffff;
 }
 
+.icono-pequeno {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.pestanas {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.pestana {
+  background: transparent;
+  border: 1px solid #555555;
+  color: #aaaaaa;
+  padding: 8px 25px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pestana.activa {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.pestana:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.galeria img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: all 0.3s;
+}
+
+.galeria img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+.oculto {
+  display: none;
+}
+
 .redes {
   display: flex;
   flex-direction: column;
@@ -159,4 +227,23 @@ a:hover {
   width: 30px;
   height: 30px;
   filter: brightness(0) invert(1);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+    letter-spacing: 4px;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  ul {
+    gap: 15px;
+  }
+
+  ul a {
+    font-size: 11px;
+  }
 }
