@@ -163,6 +163,11 @@ a:hover {
   border-bottom-color: #ffffff;
 }
 
+.icono {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
 .icono-pequeno {
   width: 18px;
   height: 18px;
@@ -237,12 +242,6 @@ a:hover {
   gap: 15px;
   border-bottom: none;
   font-size: 16px;
-}
-
-.redes img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 600px) {
