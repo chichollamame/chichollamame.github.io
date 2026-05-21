@@ -19,7 +19,7 @@ nav {
   top: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 15px 20px;
+  padding: 12px 20px;
   z-index: 100;
 }
 
@@ -29,6 +29,25 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-reloj {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav-reloj #reloj {
+  font-size: 13px;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.nav-reloj #fecha {
+  font-size: 10px;
+  color: #aaaaaa;
+  letter-spacing: 1px;
+  text-transform: capitalize;
 }
 
 .nav-nombre {
@@ -42,13 +61,13 @@ nav {
 ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 ul a {
   color: #cccccc;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
   border-bottom: none;
@@ -96,20 +115,13 @@ h1 {
   margin-bottom: 20px;
 }
 
-.reloj {
-  font-size: 48px;
-  font-weight: normal;
-  color: #ffffff;
-  letter-spacing: 6px;
-  margin-bottom: 8px;
-}
-
-.fecha {
-  font-size: 14px;
-  color: #aaaaaa;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.bio {
+  font-size: 16px;
+  color: #dddddd;
+  max-width: 500px;
+  line-height: 1.8;
   margin-bottom: 40px;
+  font-style: italic;
 }
 
 .boton {
@@ -163,17 +175,18 @@ a:hover {
   border-bottom-color: #ffffff;
 }
 
+.cancion-titulo {
+  font-size: 13px;
+  color: #aaaaaa;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
 .icono {
   font-size: 24px;
   margin-right: 10px;
-}
-
-.icono-pequeno {
-  width: 18px;
-  height: 18px;
-  filter: brightness(0) invert(1);
-  vertical-align: middle;
-  margin-right: 8px;
 }
 
 .pestanas {
@@ -250,8 +263,8 @@ a:hover {
     letter-spacing: 4px;
   }
 
-  .reloj {
-    font-size: 32px;
+  .nav-reloj #fecha {
+    display: none;
   }
 
   .galeria {
@@ -259,10 +272,10 @@ a:hover {
   }
 
   ul {
-    gap: 15px;
+    gap: 12px;
   }
 
   ul a {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
