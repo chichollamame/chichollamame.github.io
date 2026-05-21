@@ -272,6 +272,16 @@ a:hover {
   font-size: 18px;
 }
 
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 13px;
+  color: #555555;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 @media (max-width: 600px) {
   h1 {
     font-size: 36px;
