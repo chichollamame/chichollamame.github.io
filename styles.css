@@ -282,6 +282,54 @@ footer {
   text-transform: uppercase;
 }
 
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.formulario input,
+.formulario textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #555555;
+  color: #ffffff;
+  padding: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #ffffff;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+  color: #777777;
+}
+
+.formulario button {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 14px 35px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  align-self: flex-start;
+}
+
+.formulario button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 @media (max-width: 600px) {
   h1 {
     font-size: 36px;
